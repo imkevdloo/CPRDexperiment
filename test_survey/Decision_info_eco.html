@@ -1,0 +1,28 @@
+{{ block title }}
+Decision questionnaire
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+    We are interested in how you made your decisions. Please answer the questions below: 
+    <br><br>
+    {{ formfield 'decision_info' }}
+    {{ formfield 'effect_label' }}
+</p>
+
+<br><br>
+<p>
+    In this study you earned 1 point per tree. 
+    Imagine the co-label would have multiplied the points earned for each tree you cut down. 
+    This multiplier could earn you more (above 1) or earn you less (below 1) per tree. 
+    <br><br>
+    Example 1: having an eco-label would have increased the pionts per tree to 1.25 points per tree. 
+    <br><br>
+    Example 2: having an eco-label would have decreased the points per tree to 0.75.
+    <br><br>
+    {{ formfield 'multiplier_eco' }}
+    
+    {{ next_button }}
+</p>
+{{ endblock }}

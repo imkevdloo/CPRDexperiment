@@ -1,0 +1,30 @@
+{{ block title }}
+    Round {{ player.round_number }}: Results
+{{ endblock }}
+
+{{ block content }}
+<tr>
+
+    <input type ="hidden" id="teatment" value="{{player.participant.treatment}}">
+    <input type ="hidden" id="points_player_total" value="{{player.participant.points_player_total}}">
+    <input type ="hidden" id="eco_status" value="{{player.participant.eco_status}}">
+
+</tr>
+
+    <p>
+        <u>In round {{ player.round_number }}:</u>
+        <br><br>
+        You have chosen to cut down {{ player.participant.trees_player_round}} tree(s) from the common forest.
+        <br><br>
+        You have earned {{ player.participant.points_player_round}} points.
+        <br><br>
+        The group (including yourself) cut down {{ player.participant.trees_group_round }} trees from the common forest.
+        <br><br>
+        The group (including yourself) has earned {{ player.participant.points_group_round }} points.
+    </p>
+
+    {{ next_button }}
+
+{{ endblock }}
+
+

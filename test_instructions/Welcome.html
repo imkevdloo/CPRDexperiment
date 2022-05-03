@@ -1,0 +1,53 @@
+{{ block content }}
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
+
+    <img src="{{ static 'UvA-Logo.png' }}" class="center"/>
+
+    <p>
+        <br><br>
+        Dear participant,
+        <br><br>
+        Welcome and thank you for participating in this experiment!
+
+        <br><br>
+        This experiment is part of a Master's thesis for MSc Psychology.
+        The study is conducted by Imke van der Loo (Maastricht University) under the supervision of Jan Hausfeld (University of Amsterdam).
+
+        <br>
+        Please read the instructions carefully!
+        If you have any questions or concerns regarding the study or experiment, please feel free to contact Imke van der Loo (i.vanderloo@student.maastrichtuniversity.nl).
+
+        <br><br>
+        This experiment consists of a game and a concluding questionnaire.
+        The whole experiment takes 5-10 minutes to complete.
+
+        <br><br>
+        The outcomes of this study may be used only for scientific purposes and will not be shared with any third parties.
+        Participation in this study is voluntary and you will remain completely anonymous. 
+        You have the right to withdraw at any point during the study, for any reason, and without consequences.
+        Any identifying information collected in the study will be deleted after data collection is complete.
+
+        <br><br>
+        Please conduct this experiment on a <b>laptop or computer</b> and <b>do not refresh</b> the page during the game!
+
+        <br><br>
+        By choosing to consent below, you acknowledge that you have read and agree to the information provided above.
+        You hereby acknowledge that you are at least 18 years old, your participation in the study is voluntary
+        and you are aware that you may choose to terminate your participation at any time for any reason without any consequences.
+
+    {{ formfields }}
+
+    </p>
+    {{ next_button }}
+{{ endblock }}

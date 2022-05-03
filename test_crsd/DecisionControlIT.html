@@ -1,0 +1,42 @@
+
+{{ block title }}
+    Round {{ player.round_number }}
+{{ endblock }}
+
+{{ block content }}
+
+    <p>
+        <br><br><br>
+        Total trees you cut down: <button type="button" class="r1 mousy button-outcome hidden" id="trees_p"> {{ player.participant.trees_player_total}} </button>
+        <br><br>
+        Total points you have earned: <button type="button" class="r1 mousy button-outcome hidden" id="points_p"> {{ player.participant.points_player_total }} </button>
+        <br><br><br>
+        Total trees the group (including yourself) cut down: <button type="button" class="r1 mousy button-outcome hidden" id="trees_gr"> {{ player.participant.trees_group_total }} </button>
+        <br><br>
+        Total points of the group (including yourself): <button type="button" class="r1 mousy button-outcome hidden" id="points_gr"> {{ player.participant.points_group_total }} </button>
+        <br><br><br>
+        Trees left in the common forest: <button type="button" class="r1 mousy button-outcome hidden" id="forest"> {{ player.participant.forest }} </button>
+    </p>
+
+{{formfield 'trees_player_round'}}
+{{ next_button }}
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function(debug=true) {
+    InitializeVT(document.getElementsByClassName('otree-body')[0]);
+    // Convert all buttons with the class 'clickable' into click VT buttons
+    ConvertButtons2VT('clickable',sActivation='click');
+    // Convert all buttons with the class 'mousy' into mouseover VT buttons
+    ConvertButtons2VT('mousy',sActivation='mouseover');
+    // Convert all buttons with the class 'row' into click VT buttons that activate outcome-buttons with the class 'r1'
+    ConvertButtons2VT('row',sActivation='click', 'r1');
+});
+</script>
+
+<link href="{% static 'global/VT_functionality.css' %}" rel="stylesheet">
+<script src="{% static 'global/VT_functionality2.js' %}"></script>
+
+{{ endblock }}

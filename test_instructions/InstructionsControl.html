@@ -1,0 +1,97 @@
+{{ block title }}
+    Instructions
+{{ endblock }}
+
+{{ block content }}
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+
+<p>
+    Please read the instructions carefully before you start.The payment you receive at the end of the study depends on your choices and the choices of others. 
+    The whole study consists of two parts: Part 1 is described below and payment relevant, part 2 consists of questionnaires.
+    In addition to the points that you earn from part 1, you also earn <b>X Euros</b> as a participation fee.
+    
+    <br><br>
+    <h4>Part 1</h4>
+    In part 1, you will interact with 3 copmuterized participants for several rounds. 
+    You and the other 3 participants, share a <b>common forest</b>. You can each cut down trees to produce goods. 
+    Each tree that you cut down earns you points.
+    This part <b>can last up to 10 rounds</b>.
+    
+    <br><br>
+    <b> The forest </b>
+    <br>
+    At the start of part 1, the forest <b>contains 100 trees</b>. 
+    The regrowth rate of the forest is <b>40 trees per round</b>. This means before each round (starting in round 2), 40 new trees are added to the forest. 
+    For example, if no trees are cut in the first round, the second round will start with 140 trees in the forest. 
+    Be aware, <b>once the forest has no more trees, this part of the study ends</b> even if you are not in round 10. 
+
+    <br><br>
+    <b> Your decision </b>
+    <br>
+    In each round, you and the other computerized participants decide individually on how many trees you want to cut down from the common forest.
+    You have the option to cut down any number of trees between <b>0 and 20 trees per round</b>.The trees you cut down are equal to the points you earn and will be converted into your profit at the end.
+    <b>Every tree cut down equals 1 point </b>. Each point is worth 10 cents, which leads to the following conversion rate:
+    <br><br>
+                <b>1 point = 0.10 Euros</b> (10 Points = 1 Euro)
+    <br><br>
+    If you cut down 10 or fewer trees <b>in every round</b>, your production is considered sustainable. 
+    Once you cut down more than 10 trees in any round, your production is not sustainable anymore and you lose the eco-label. 
+    If you earn the eco-label, your points per tree will remain the same.  
+    
+    <br><br>
+    <b>BE AWARE!</b> Part 1 ends after 10 rounds, or when the forest has 0 trees left.
+    If the forest has 0 trees left, the forest dies and part 1 ends. This means that there are no rounds left to cut down trees and earn points. 
+    This also means that <b>you do not get any points in the round in which the forest died </b>.
+    <br><br>
+    <b> Left-over trees</b>
+    <br>
+    For every 10 trees left in the forest at the end of the study, we will plant one tree in real life. 
+    <br><br>
+    <b> Decision Screen</b>
+    <br>
+    When you make the decision, you see different pieces of information. There will be an example trial before the payment-relevant choices start. In that round, you can get used to the setup of the decision screen.
+    On each decision screen, you will see:
+    <br><br>
+           - Which round you are currently in
+    <br><br>
+           - How many points you have earned up to now, how many trees you have cut down up to now, whether you still have an eco-label, 
+    <br><br>
+           - How many points all 4 participants earned together, how many trees all 4 participants cut down in total, how many of the 4 participants still have an eco-label
+    <br><br>
+           - How many trees are left in the forest
+    <br><br>
+    After each decision, you will see an information screen about how many trees were cut down in the last round, and also whether the forest is still alive.
+    <br><br><br>
+    <h4>Part 2</h4>
+    In part 2 you will be asked to fill out some small questionnaires.  
+    <br>
+</p>
+<br>
+<h3>Are the instructions clear?</h3>
+<p>
+    To check whether you read and understood the instructions, please answer in the following questions.
+    <br>
+    {{ formfield 'forest' }}
+    {{ formfield 'regrowth' }}
+    {{ formfield 'rounds'  }}
+    {{ formfield 'rounds_example'  }}
+    {{ formfield 'check_points'  }}
+</p>
+    {{ next_button }}
+{{ endblock }}
+
+

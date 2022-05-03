@@ -1,0 +1,28 @@
+
+.hidden {
+    color:  rgb(200, 200, 200);
+    background-color: rgb(200, 200, 200);
+  }
+
+  .non-hidden {
+    color: #000;
+    background-color: rgb(200, 200, 200);
+  }
+
+  .hidden .button-img{
+    display: none;
+  }
+
+  .non-hidden .button-img{
+    display: inline-flex;
+  }
+
+  .button-outcome {
+    font-size: 1em;
+  }
+
+button {
+    border: 0;
+    height: 30px;
+    width: 80px;
+  }
